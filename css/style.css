@@ -15,7 +15,7 @@ body {
   overflow: hidden;
   background: #002;
   background-size: 400% 400%;
-  background-image: linear-gradient(0deg,#000,#96f,#000,#96f,#000, #96f);
+  background-image: linear-gradient(0deg,#000,#45f,#000,#45f,#000, #45f, #000 );
   /*background-image: linear-gradient(90deg,#f0c27b,#efb870,#ecae6b,#e9a465,#e79960,#e58f5b,#e48356,#e37651,#e4684c,#e75548,#e6434d,#d83f5a,#cb3b62,#be3766,#b13367,#a43067,#982c66,#8c2863,#812460,#76205c,#6b1d58,#601953,#55154e,#4b1248);
    */
   -webkit-animation: background-animation 30s linear infinite;
@@ -84,6 +84,7 @@ margin-left: -8px;
   top: 50%;
   left: 50%;
   margin-left: -33%;
+  opacity: 0.5;
   margin-top: -33%;
   box-shadow: 0 0 20px -5px #000;
   -webkit-animation-duration: 5s;
@@ -118,7 +119,7 @@ margin-left: -8px;
 
 @-webkit-keyframes shadow {
   0% {
-    box-shadow:  0 0 0px 0px #c0ccff;
+    box-shadow:  0 0 3px 1px #c0ccff;
   }
   50% {
     box-shadow:  0 0 10px 2px #c0ccff;
@@ -130,7 +131,7 @@ margin-left: -8px;
 
 @keyframes shadow {
   0% {
-    box-shadow:  0 0 0px 0px #c0ccff;
+    box-shadow:  0 0 3px 1px #c0ccff;
   }
   50% {
     box-shadow:  0 0 10px 2px #c0ccff;
@@ -141,7 +142,7 @@ margin-left: -8px;
 }
 @-webkit-keyframes shadow-hover {
   100% {
-    box-shadow:  0 0 0px 0px #c0ccff;
+    box-shadow:  0 0 3px 1px #c0ccff;
   }
   50% {
     box-shadow:  0 0 10px 2px #c0ccff;
@@ -152,7 +153,7 @@ margin-left: -8px;
 }
 @keyframes shadow-hover {
   100% {
-    box-shadow:  0 0 0px 0px #c0ccff;
+    box-shadow:  0 0 3px 1px #c0ccff;
   }
   50% {
     box-shadow:  0 0 10px 2px #c0ccff;
