@@ -1,0 +1,165 @@
+body {
+  background: #000;
+}
+
+
+.grad-and-mask {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+margin-top: -3em;
+margin-left: -10px;
+width: 700px;
+height: 800px;
+overflow: hidden;
+background: #002;
+background-size: 400% 400%;
+background-image: linear-gradient(0deg,#000,#66f,#000,#66f,#000, #66f);
+/*background-image: linear-gradient(90deg,#f0c27b,#efb870,#ecae6b,#e9a465,#e79960,#e58f5b,#e48356,#e37651,#e4684c,#e75548,#e6434d,#d83f5a,#cb3b62,#be3766,#b13367,#a43067,#982c66,#8c2863,#812460,#76205c,#6b1d58,#601953,#55154e,#4b1248);
+*/
+-webkit-animation: background-animation 30s linear infinite;
+animation: background-animation 30s  linear infinite;
+}
+
+@keyframes background-animation {
+  0% {
+    background-position: 0% 99%; }
+  50% {
+    background-position: 100% 2%; }
+  100% {
+    background-position: 0% 99%; } }
+
+img {
+  margin-top: -3em;
+margin-left: -8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.container {
+  width: 800px;
+  height: 800px;
+  margin-top: 3em;
+  position: relative;
+  background: #000;
+  overflow: visible;
+}
+
+.circle {
+  position: absolute;
+  background: transparent;
+  border-radius: 100%;
+  /*box-shadow: 0 0 20px 0px #000;*/
+  will-change: box-shadow;
+}
+
+.middle {
+  position: absolute;
+  background: transparent;
+  border-radius: 100%;
+  width: 16%;
+  height: 16%;
+  top: 50%;
+  left: 50%;
+  margin-left: -8%;
+  margin-top: -8%;
+  /*box-shadow: 0 0 5px 3px #fff, 0 0 15px 7px #ffcca9;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-name: shadow;
+          animation-name: shadow;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+          */
+}
+
+.circle > .circle {
+  width: 66%;
+  height: 66%;
+  top: 50%;
+  left: 50%;
+  margin-left: -33%;
+  margin-top: -33%;
+  box-shadow: 0 0 20px -5px #000;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-name: shadow;
+          animation-name: shadow;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+ /* transition: box-shadow 512ms ease; */
+}
+
+.circle > .circle:hover {
+  
+    box-shadow: 0 0 2px 1px #f00, 0 0 10px 2px #f00;
+  /*background-image: radial-gradient(#9C9182 0%, #FFCCA9 25%, #2F2821 32%, #141414 51%);*/
+  -webkit-animation: none;
+          animation: none;
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
+  -webkit-animation-name: shadow-hover;
+          animation-name: shadow-hover;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  /*
+   box-shadow: top left blur strength color;
+
+   */
+}
+
+@-webkit-keyframes shadow {
+  0% {
+    box-shadow: 0 0 20px -5px #000, 0 0 0px 0px #c0ccff;
+  }
+  50% {
+    box-shadow: 0 0 2px 1px #c0ccff, 0 0 10px 2px #c0ccff;
+  }
+  100% {
+    box-shadow: 0 0 5px 3px #fff, 0 0 15px 7px #ffcca9;
+  }
+}
+
+@keyframes shadow {
+  0% {
+    box-shadow: 0 0 20px -5px #000, 0 0 0px 0px #c0ccff;
+  }
+  50% {
+    box-shadow: 0 0 2px 1px #c0ccff, 0 0 10px 2px #c0ccff;
+  }
+  100% {
+    box-shadow: 0 0 5px 3px #fff, 0 0 15px 7px #ffcca9;
+  }
+}
+@-webkit-keyframes shadow-hover {
+  100% {
+    box-shadow: 0 0 20px -5px #000, 0 0 0px 0px #c0ccff;
+  }
+  50% {
+    box-shadow: 0 0 2px 1px #c0ccff, 0 0 10px 2px #c0ccff;
+  }
+  0% {
+    box-shadow: 0 0 5px 3px #fff, 0 0 15px 7px #ffcca9;
+  }
+}
+@keyframes shadow-hover {
+  100% {
+    box-shadow: 0 0 20px -5px #000, 0 0 0px 0px #c0ccff;
+  }
+  50% {
+    box-shadow: 0 0 2px 1px #c0ccff, 0 0 10px 2px #c0ccff;
+  }
+  0% {
+    box-shadow: 0 0 5px 3px #fff, 0 0 15px 7px #ffcca9;
+  }
+}
